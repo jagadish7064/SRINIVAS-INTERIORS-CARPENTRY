@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery | Srinivas Interiors</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .portfolio-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* Sidebar Filters */
+        .filter-sidebar {
+            background: #1C1613;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            position: sticky;
+            top: 100px;
+        }
+
+        .filter-group { margin-bottom: 2rem; }
+        .filter-group h4 { margin-bottom: 1rem; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 0.5rem; color: #FFFFFF; font-family: 'Cinzel', serif; }
+        
+        .filter-list { list-style: none; padding: 0; }
+        .filter-list li { margin-bottom: 0.5rem; }
+        
+        .filter-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            transition: var(--transition-fast);
+        }
+        
+        .filter-label:hover { color: var(--color-gold); }
+        .filter-label input { accent-color: var(--color-gold); }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Advanced Lightbox */
+        .lightbox {
+            position: fixed; inset: 0;
+            background: rgba(17, 17, 17, 0.95);
+            z-index: 9999;
+            display: flex;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active { opacity: 1; pointer-events: auto; }
+        
+        .lightbox-container {
+            width: 90%; max-width: 1200px;
+            margin: auto;
+            background: #1C1613;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            border-radius: var(--radius-md);
+            display: grid; grid-template-columns: 2fr 1fr;
+            overflow: hidden;
+            max-height: 90vh;
+            color: #FFFFFF;
+        }
+
+        .lightbox-images { position: relative; background: #0F0B09; display: flex; align-items: center; justify-content: center; padding: 1.5rem; width: 100%; height: 100%; min-height: 450px; }
+        .lightbox-main-img { max-width: 100%; max-height: 80vh; width: auto; height: auto; object-fit: contain !important; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        .lightbox-details { padding: 2rem; overflow-y: auto; background: #1C1613; color: #FFFFFF; }
+        .lb-title { font-size: 2rem; margin-bottom: 0.5rem; color: #FFFFFF; font-family: 'Cinzel', serif; }
+        .lb-rating { color: var(--color-gold); margin-bottom: 1.5rem; }
+        
+        .lb-specs { list-style: none; padding: 0; margin-bottom: 2rem; }
+        .lb-specs li { margin-bottom: 0.8rem; display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(255, 255, 255, 0.15); padding-bottom: 0.5rem; }
+        .lb-specs span.lbl { color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
+        .lb-specs span.val { font-weight: 500; color: #FFFFFF; }
+        
+        .lb-close { position: absolute; top: 20px; right: 20px; font-size: 1.5rem; color: var(--color-white); background: transparent; border: none; cursor: pointer; }
+
+        @media (max-width: 992px) {
+            .portfolio-layout { grid-template-columns: 1fr; }
+            .filter-sidebar { position: relative; top: 0; }
+            .lightbox-container { grid-template-columns: 1fr; grid-template-rows: 50vh 1fr; }
+        }
+    </style>
+</head>
+<body style="background-color: #15110F; color: #FFFFFF;">
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    <div class="page-transition"></div>
+    <header class="header glass scrolled" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrap">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-text">SRINIVAS</span>
+                    <span class="logo-subtext">INTERIORS & CARPENTRY</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html" class="nav-link ">HOME</a></li>
+                    <li><a href="about.html" class="nav-link ">ABOUT US</a></li>
+                    <li><a href="services.html" class="nav-link ">SERVICES</a></li>
+                    <li><a href="gallery.html" class="nav-link active">PROJECTS</a></li>
+                    <li><a href="contact.html" class="nav-link ">CONTACT</a></li>
+                    <li><a href="contact.html" class="btn btn-primary" style="margin-left: 15px; padding: 12px 24px;">GET A QUOTE</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Solid Luxury Header Banner (No Image Bleed Overlay) -->
+    <section class="services-header-banner">
+        <div class="container">
+            <span class="hero-badge"><i class="fas fa-hammer"></i> Work Portfolio</span>
+            <h1 class="page-title">Projects Gallery</h1>
+            <p class="page-subtitle">Explore our bespoke modular wardrobes, kitchens, TV units, teak doors, and aluminium partitions.</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 3rem; background-color: #15110F !important;">
+        <div class="container">
+            <div class="portfolio-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filter-sidebar">
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <ul class="filter-list">
+                            <li><label class="filter-label"><input type="radio" name="cat" value="all" checked> All Projects</label></li>
+                            <li><label class="filter-label"><input type="radio" name="cat" value="wardrobes"> Wardrobes</label></li>
+                            <li><label class="filter-label"><input type="radio" name="cat" value="kitchen"> Kitchen Cabinets</label></li>
+                            <li><label class="filter-label"><input type="radio" name="cat" value="tv"> TV Units</label></li>
+                            <li><label class="filter-label"><input type="radio" name="cat" value="doors"> Doors & Windows</label></li>
+                            <li><label class="filter-label"><input type="radio" name="cat" value="aluminium"> Aluminium Works</label></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Gallery -->
+                <div class="gallery-grid" id="galleryGrid">
+
+                    <!-- ================= 1. WARDROBES ================= -->
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="walnut" data-finish="gloss" data-style="modern" 
+                         data-details='{"title":"Herringbone Pattern Sliding Wardrobe","rating":"★★★★★","material":"BWP Marine Plywood & HDMR","wood":"Teak & Teak Pattern Veneer","finish":"Custom Herringbone Polish","color":"Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/aluminium (2).png" alt="Herringbone Pattern Sliding Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Herringbone Sliding Wardrobe</h3><p class="project-meta">BROWN • SLIDING WARDROBE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="white" data-finish="laminate" data-style="luxury" 
+                         data-details='{"title":"Minimalist White & Grey Gloss Sliding Wardrobe","rating":"★★★★★","material":"BWP Marine Plywood & HDMR Core","wood":"White & Grey Polyurethane Gloss","finish":"Soft-Touch Gloss Finish","color":"White & Grey","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/aluminium (3).png" alt="Minimalist White & Grey Gloss Sliding Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">White Gloss Sliding Wardrobe</h3><p class="project-meta">WHITE • SLIDING WARDROBE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="walnut" data-finish="pvc" data-style="premium" 
+                         data-details='{"title":"Geometric Wood Grain Sliding Wardrobe","rating":"★★★★★","material":"BWP Plywood & Geometric Texture Laminate","wood":"Walnut Wood Grain","finish":"Matte Texture Finish","color":"Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/aluminium (1).png" alt="Geometric Wood Grain Sliding Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Geometric Sliding Wardrobe</h3><p class="project-meta">WALNUT • SLIDING WARDROBE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="walnut" data-finish="wood" data-style="luxury" 
+                         data-details='{"title":"Full Height 3-Door Sliding Wardrobe","rating":"★★★★★","material":"BWP Plywood & Loft Storage Unit","wood":"Dark Walnut Finish","finish":"Polyurethane Soft Polish","color":"Dark Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/aluminium (4).png" alt="Full Height 3-Door Sliding Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">3-Door Sliding Wardrobe</h3><p class="project-meta">DARK WALNUT • SLIDING</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="walnut" data-finish="gloss" data-style="modern" 
+                         data-details='{"title":"Herringbone Custom Wooden Wardrobe","rating":"★★★★★","material":"BWP Marine Plywood & HDMR","wood":"Teak & Teak Pattern Veneer","finish":"Custom Herringbone Polish","color":"Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe_custom_herringbone.jpg" alt="Herringbone Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Herringbone Custom Wardrobe</h3><p class="project-meta">HERRINGBONE • TEAK VENEER</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="grey" data-finish="wood" data-style="luxury" 
+                         data-details='{"title":"Custom Wooden Wardrobe #3","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Wood Premium Polish","color":"Grey","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (1).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">GREY • WOOD</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="walnut" data-finish="matte" data-style="minimal" 
+                         data-details='{"title":"Custom Wooden Wardrobe #4","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Matte Premium Polish","color":"Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (10).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">WALNUT • MATTE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="oak" data-finish="gloss" data-style="premium" 
+                         data-details='{"title":"Custom Wooden Wardrobe #5","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Gloss Premium Polish","color":"Oak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (11).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">OAK • GLOSS</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="teak" data-finish="laminate" data-style="modern" 
+                         data-details='{"title":"Custom Wooden Wardrobe #6","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Laminate Premium Polish","color":"Teak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (12).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">TEAK • LAMINATE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="brown" data-finish="acrylic" data-style="classic" 
+                         data-details='{"title":"Custom Wooden Wardrobe #7","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Acrylic Premium Polish","color":"Brown","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (13).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">BROWN • ACRYLIC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="white" data-finish="pvc" data-style="luxury" 
+                         data-details='{"title":"Custom Wooden Wardrobe #8","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Pvc Premium Polish","color":"White","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (2).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">WHITE • PVC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="black" data-finish="wood" data-style="minimal" 
+                         data-details='{"title":"Custom Wooden Wardrobe #9","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Wood Premium Polish","color":"Black","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (3).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">BLACK • WOOD</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="grey" data-finish="matte" data-style="premium" 
+                         data-details='{"title":"Custom Wooden Wardrobe #10","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Matte Premium Polish","color":"Grey","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (4).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">GREY • MATTE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="teak" data-finish="acrylic" data-style="luxury" 
+                         data-details='{"title":"Custom Wooden Wardrobe #11","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Acrylic Premium Polish","color":"Teak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (7).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">TEAK • ACRYLIC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="brown" data-finish="pvc" data-style="minimal" 
+                         data-details='{"title":"Custom Wooden Wardrobe #12","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Pvc Premium Polish","color":"Brown","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (8).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">BROWN • PVC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="wardrobes" data-color="white" data-finish="wood" data-style="premium" 
+                         data-details='{"title":"Custom Wooden Wardrobe #13","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Wood Premium Polish","color":"White","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/wardrobe (9).png" alt="Custom Wooden Wardrobe"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Custom Wooden Wardrobe</h3><p class="project-meta">WHITE • WOOD</p></div></div>
+                    </div>
+
+
+                    <!-- ================= 2. KITCHEN CABINETS ================= -->
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="grey" data-finish="acrylic" data-style="minimal" 
+                         data-details='{"title":"Modern Kitchen Interior #14","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Acrylic Premium Polish","color":"Grey","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (1).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">GREY • ACRYLIC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="walnut" data-finish="pvc" data-style="premium" 
+                         data-details='{"title":"Modern Kitchen Interior #15","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Pvc Premium Polish","color":"Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (2).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">WALNUT • PVC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="oak" data-finish="wood" data-style="modern" 
+                         data-details='{"title":"Modern Kitchen Interior #16","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Wood Premium Polish","color":"Oak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (3).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">OAK • WOOD</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="teak" data-finish="matte" data-style="classic" 
+                         data-details='{"title":"Modern Kitchen Interior #17","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Matte Premium Polish","color":"Teak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (4).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">TEAK • MATTE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="brown" data-finish="gloss" data-style="luxury" 
+                         data-details='{"title":"Modern Kitchen Interior #18","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Gloss Premium Polish","color":"Brown","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (5).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">BROWN • GLOSS</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="white" data-finish="laminate" data-style="minimal" 
+                         data-details='{"title":"Modern Kitchen Interior #19","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Laminate Premium Polish","color":"White","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (6).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">WHITE • LAMINATE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="black" data-finish="acrylic" data-style="premium" 
+                         data-details='{"title":"Modern Kitchen Interior #20","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Acrylic Premium Polish","color":"Black","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (7).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">BLACK • ACRYLIC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="grey" data-finish="pvc" data-style="modern" 
+                         data-details='{"title":"Modern Kitchen Interior #21","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Pvc Premium Polish","color":"Grey","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen (8).png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">GREY • PVC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="kitchen" data-color="walnut" data-finish="wood" data-style="classic" 
+                         data-details='{"title":"Modern Kitchen Interior #22","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Wood Premium Polish","color":"Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/kitchen.png" alt="Modern Kitchen Interior"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Modern Kitchen Interior</h3><p class="project-meta">WALNUT • WOOD</p></div></div>
+                    </div>
+
+
+                    <!-- ================= 3. TV UNITS ================= -->
+                    <div class="project-card gallery-item" data-cat="tv" data-color="teak" data-finish="gloss" data-style="minimal" 
+                         data-details='{"title":"Architectural TV Unit & Display Cabinet","rating":"★★★★★","material":"BWP Plywood & Ambient Profile Lighting","wood":"Dark Floral Veneer & Pebble Backdrop","finish":"High Gloss & Ambient LED","color":"Dark Walnut","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/TVunit (5).png" alt="Architectural TV Unit & Display Cabinet"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Architectural TV Unit & Display</h3><p class="project-meta">DARK WALNUT • AMBIENT LED</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="tv" data-color="oak" data-finish="matte" data-style="luxury" 
+                         data-details='{"title":"Luxury TV Panel Unit #24","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Matte Premium Polish","color":"Oak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/tvunit (1).png" alt="Luxury TV Panel Unit"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Luxury TV Panel Unit</h3><p class="project-meta">OAK • MATTE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="tv" data-color="brown" data-finish="laminate" data-style="premium" 
+                         data-details='{"title":"Luxury TV Panel Unit #25","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Laminate Premium Polish","color":"Brown","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/tvunit (3).png" alt="Luxury TV Panel Unit"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Luxury TV Panel Unit</h3><p class="project-meta">BROWN • LAMINATE</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="tv" data-color="white" data-finish="acrylic" data-style="modern" 
+                         data-details='{"title":"Luxury TV Panel Unit #26","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Acrylic Premium Polish","color":"White","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/tvunit (4).png" alt="Luxury TV Panel Unit"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Luxury TV Panel Unit</h3><p class="project-meta">WHITE • ACRYLIC</p></div></div>
+                    </div>
+
+                    <div class="project-card gallery-item" data-cat="tv" data-color="black" data-finish="pvc" data-style="classic" 
+                         data-details='{"title":"Luxury TV Panel Unit #27","rating":"★★★★★","material":"BWP Commercial Plywood & HDMR","wood":"Teak / Dark Walnut Veneer","finish":"Pvc Premium Polish","color":"Black","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/tvunit.png" alt="Luxury TV Panel Unit"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Luxury TV Panel Unit</h3><p class="project-meta">BLACK • PVC</p></div></div>
+                    </div>
+
+
+                    <!-- ================= 4. DOORS & WINDOWS ================= -->
+                    <div class="project-card gallery-item" data-cat="doors" data-color="black" data-finish="laminate" data-style="luxury" 
+                         data-details='{"title":"Teak Wood Main Door #28","rating":"★★★★★","material":"Solid Teak Wood & CNC Carving","wood":"Teak Wood","finish":"Laminate Premium Polish","color":"Teak","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/door.png" alt="Teak Wood Main Door"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Teak Wood Main Door</h3><p class="project-meta">SOLID TEAK • CARVED</p></div></div>
+                    </div>
+
+
+                    <!-- ================= 5. ALUMINIUM WORKS ================= -->
+                    <div class="project-card gallery-item" data-cat="aluminium" data-color="white" data-finish="gloss" data-style="classic" 
+                         data-details='{"title":"Aluminium Glass Partition System","rating":"★★★★★","material":"Precision Powder-Coated Aluminium & Toughened Glass","wood":"Slim Architectural Frame","finish":"Gloss White Powder Coated","color":"White / Clear Glass","location":"Hyderabad, Telangana"}'>
+                        <div class="crop-wrap" style="width:100%; height:100%;"><img src="assets/aluminium.png" alt="Aluminium Glass Partition System"></div>
+                        <div class="project-overlay"><div class="project-info"><h3 class="project-title">Aluminium Glass Partition</h3><p class="project-meta">SLIM FRAME • TOUGHENED GLASS</p></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox UI -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+        <div class="lightbox-container">
+            <div class="lightbox-images">
+                <img src="" id="lbMainImg" class="lightbox-main-img">
+            </div>
+            <div class="lightbox-details">
+                <h2 class="lb-title" id="lbTitle">Project Title</h2>
+                <div class="lb-rating" id="lbRating">★★★★★</div>
+                
+                <h4 style="margin-bottom: 1rem;">Project Details</h4>
+                <ul class="lb-specs">
+                    <li><span class="lbl">Material Used</span> <span class="val" id="lbMaterial">Plywood</span></li>
+                    <li><span class="lbl">Wood Type</span> <span class="val" id="lbWood">Teak</span></li>
+                    <li><span class="lbl">Finish</span> <span class="val" id="lbFinish">Matte</span></li>
+                    <li><span class="lbl">Colour</span> <span class="val" id="lbColor">Brown</span></li>
+                    <li><span class="lbl">Location</span> <span class="val" id="lbLocation">Hyderabad</span></li>
+                </ul>
+
+                <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;"><i class="fas fa-envelope"></i> Request Quote</a>
+                <a href="tel:+918341745511" class="btn btn-outline" style="width: 100%; text-align: center; margin-top: 10px;"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+        <!-- Universal Luxury High-Contrast Footer -->
+    <footer class="footer" style="background-color: #1C1613; color: #FFFFFF; padding: 4rem 0 2rem 0; border-top: 2px solid #C5A059;">
+        <div class="container">
+            <div class="footer-top" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; text-align: left;">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                        <div class="logo-icon-wrap" style="width: 40px; height: 40px; background: #C5A059; color: #1C1613; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <div class="logo-text-group">
+                            <span class="logo-text" style="color: #FFFFFF; font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 800; letter-spacing: 2px;">SRINIVAS</span>
+                            <span class="logo-subtext" style="color: #C5A059; font-size: 0.65rem; letter-spacing: 3px; font-weight: 700;">INTERIORS & CARPENTRY</span>
+                        </div>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.85); line-height: 1.6; font-size: 0.95rem;">Bespoke furniture, modular kitchens, wardrobes, and aluminium architectural solutions crafted with precision and passion.</p>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="index.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Home</a></li>
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">About Us</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Services</a></li>
+                        <li><a href="gallery.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Projects Gallery</a></li>
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Core Services</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Modular Kitchens</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Modular Wardrobes</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">TV Panel Units</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Wooden Doors & Windows</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Aluminium & Glass Partitions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Owner Contact Details</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                        <li style="color: #FFFFFF; font-weight: 700; font-size: 1.05rem;"><i class="fas fa-user-tie" style="color: #C5A059; margin-right: 10px;"></i> Srinivasarao Vasamsetti <span style="font-weight: 400; color: #C5A059; font-size: 0.85rem; display: block; margin-left: 24px;">(Owner & Master Craftsman)</span></li>
+                        <li><a href="tel:+918341745511" style="color: #FFFFFF; text-decoration: none; font-size: 0.95rem; font-weight: 600;"><i class="fas fa-phone-alt" style="color: #C5A059; margin-right: 10px;"></i> +91 83417 45511</a></li>
+                        <li><a href="https://wa.me/918341745511" style="color: #25D366; text-decoration: none; font-size: 0.95rem; font-weight: 600;"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> WhatsApp Consultation</a></li>
+                        <li><a href="mailto:info@srinivasinteriors.com" style="color: #FFFFFF; text-decoration: none; font-size: 0.95rem;"><i class="fas fa-envelope" style="color: #C5A059; margin-right: 10px;"></i> info@srinivasinteriors.com</a></li>
+                        <li style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><i class="fas fa-map-marker-alt" style="color: #C5A059; margin-right: 10px;"></i> Hyderabad, Telangana, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.88rem; margin: 0;">&copy; 2026 Srinivas Interiors & Carpentry. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.2rem;">
+                    <a href="#" style="color: #C5A059; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #C5A059; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918341745511" style="color: #25D366; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.gallery-item');
+            const radios = document.querySelectorAll('input[name="cat"]');
+            
+            function filterGallery() {
+                const checkedRadio = document.querySelector('input[name="cat"]:checked');
+                const activeCat = checkedRadio ? checkedRadio.value : 'all';
+
+                items.forEach(item => {
+                    let show = false;
+                    if (activeCat === 'all' || item.getAttribute('data-cat') === activeCat) {
+                        show = true;
+                    }
+                    item.style.display = show ? 'block' : 'none';
+                });
+            }
+
+            radios.forEach(r => r.addEventListener('change', filterGallery));
+            filterGallery();
+
+            // Lightbox
+            const lightbox = document.getElementById('lightbox');
+            const lbMainImg = document.getElementById('lbMainImg');
+            let currentHighRes = "";
+
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    if (!img) return;
+                    currentHighRes = img.src;
+                    lbMainImg.src = currentHighRes;
+                    
+                    try {
+                        const detailsAttr = item.getAttribute('data-details');
+                        if (detailsAttr) {
+                            const details = JSON.parse(detailsAttr);
+                            if (details.title) document.getElementById('lbTitle').innerText = details.title;
+                            if (details.rating) document.getElementById('lbRating').innerText = details.rating;
+                            if (details.material) document.getElementById('lbMaterial').innerText = details.material;
+                            if (details.wood) document.getElementById('lbWood').innerText = details.wood;
+                            if (details.finish) document.getElementById('lbFinish').innerText = details.finish;
+                            if (details.color) document.getElementById('lbColor').innerText = details.color;
+                            if (details.location) document.getElementById('lbLocation').innerText = details.location;
+                        }
+                    } catch (e) {
+                        console.log('Details parse error:', e);
+                    }
+
+                    lightbox.classList.add('active');
+                });
+            });
+
+            const lbClose = document.getElementById('lbClose');
+            if (lbClose) {
+                lbClose.addEventListener('click', () => {
+                    lightbox.classList.remove('active');
+                });
+            }
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Floating Action Controls -->
+    <div class="fab-container">
+        <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20would%20like%20to%20discuss%20a%20new%20interior%20project." target="_blank" class="fab-btn fab-whatsapp" title="WhatsApp Chat" aria-label="WhatsApp Chat">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="fab-btn fab-top" id="fabTop" title="Back to Top" aria-label="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+</body>
+</html>

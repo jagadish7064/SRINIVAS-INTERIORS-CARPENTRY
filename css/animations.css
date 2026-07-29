@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Luxury Scroll Animations & GPU-Accelerated Micro-Interactions
+   ========================================================================== */
+
+/* Hardware acceleration helper */
+.gpu-accelerated {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #C5A059 0%, #DFBA73 50%, #D4AF37 100%);
+    box-shadow: 0 0 12px rgba(197, 160, 89, 0.8);
+    z-index: 10001;
+    transition: width 0.08s cubic-bezier(0.1, 1, 0.1, 1);
+    pointer-events: none;
+}
+
+/* Base Reveal States for GPU Acceleration */
+.fade-in-up,
+.fade-in,
+.slide-up,
+.scale-up,
+.stagger-item {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Initial Off-screen Offsets */
+.fade-in-up {
+    transform: translate3d(0, 38px, 0);
+}
+
+.slide-up {
+    transform: translate3d(0, 55px, 0);
+}
+
+.fade-in {
+    transform: translate3d(0, 0, 0);
+}
+
+.scale-up {
+    transform: scale3d(0.93, 0.93, 1);
+}
+
+/* Triggered Visible State */
+.fade-in-up.is-visible,
+.slide-up.is-visible,
+.fade-in.is-visible,
+.scale-up.is-visible,
+.stagger-item.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+/* Stagger Sequence Delays */
+.delay-1, .stagger-delay-1 { transition-delay: 0.08s; }
+.delay-2, .stagger-delay-2 { transition-delay: 0.16s; }
+.delay-3, .stagger-delay-3 { transition-delay: 0.24s; }
+.delay-4, .stagger-delay-4 { transition-delay: 0.32s; }
+.delay-5, .stagger-delay-5 { transition-delay: 0.40s; }
+.delay-6, .stagger-delay-6 { transition-delay: 0.48s; }
+
+/* Image Hover Parallax & Smooth Scaling */
+.crop-wrap,
+.service-img-wrap,
+.project-card,
+.feature-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.crop-wrap img,
+.service-img-wrap img,
+.project-card img {
+    transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+    will-change: transform;
+}
+
+.crop-wrap:hover img,
+.service-img-wrap:hover img,
+.project-card:hover img {
+    transform: scale3d(1.04, 1.04, 1);
+}
+
+/* Luxury Card Hover Elevation & Soft Gold Glow */
+.service-card,
+.project-card,
+.feature-card,
+.contact-card,
+.testimonial-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s ease;
+    will-change: transform, box-shadow;
+}
+
+.service-card:hover,
+.project-card:hover,
+.feature-card:hover,
+.contact-card:hover,
+.testimonial-card:hover {
+    transform: translate3d(0, -8px, 0);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(197, 160, 89, 0.25);
+}
+
+/* Floating WhatsApp Pulse Animation */
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.fab-whatsapp {
+    animation: whatsappPulse 2.5s infinite;
+}
+
+/* Smooth Active Header Nav Highlight */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #C5A059, #DFBA73);
+    transform: translateX(-50%);
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: var(--color-gold) !important;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Page Transition Overlay */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    z-index: 9999;
+    transform: translateY(-100%);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}

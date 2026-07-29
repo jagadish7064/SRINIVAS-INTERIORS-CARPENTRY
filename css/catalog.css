@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Catalog & Filters Styles
+   ========================================================================== */
+
+/* Filter Sidebar */
+.portfolio-modal-layout {
+    display: flex;
+    gap: 2rem;
+    height: calc(100vh - 150px);
+}
+
+.filter-sidebar {
+    width: 250px;
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.25rem;
+}
+
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+}
+
+.filter-label input {
+    accent-color: var(--color-primary);
+}
+
+.gallery-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+/* Product Detail Modal */
+.product-detail-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-light);
+    overflow-y: auto;
+    animation: slideInRight 0.4s ease-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.product-detail-modal.active {
+    display: block;
+}
+
+.product-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Slider & Zoom */
+.product-gallery {
+    position: relative;
+}
+
+.hero-slider-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    cursor: zoom-in;
+    transition: transform 0.3s;
+}
+
+.hero-slider-img:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.thumbnail.active, .thumbnail:hover {
+    opacity: 1;
+    border: 2px solid var(--color-primary);
+}
+
+/* Before / After Slider */
+.ba-slider-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.ba-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ba-after {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: var(--color-white);
+    cursor: ew-resize;
+    transform: translateX(-50%);
+}
+
+/* Product Info */
+.product-info h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.spec-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+}
+
+.spec-item span {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.product-features {
+    margin-bottom: 2rem;
+}
+
+.product-features h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.product-features ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--color-text-light);
+}
+
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .portfolio-modal-layout {
+        flex-direction: column;
+    }
+    .filter-sidebar {
+        width: 100%;
+        max-height: 200px;
+    }
+}

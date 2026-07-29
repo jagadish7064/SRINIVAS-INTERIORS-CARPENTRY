@@ -1,0 +1,184 @@
+{
+  "wardrobes": [
+    {
+      "id": "w1",
+      "name": "Modern Minimal Black Matte Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹65,000",
+      "material": "HDHMR & Laminate",
+      "dimensions": "8ft x 7ft x 2ft",
+      "woodFinish": "Matte Finish",
+      "warranty": "5 Years",
+      "deliveryTime": "15 Days",
+      "features": ["Soft Close Hinges", "Anti-fingerprint", "Built-in LED"],
+      "filters": {
+        "colour": ["Black"],
+        "finish": ["Matte", "Laminate"],
+        "style": ["Modern", "Minimal"]
+      },
+      "images": ["assets/wardrobe_black_matte.png", "assets/wardrobe_black_matte.png"],
+      "projectLocation": "Banjara Hills, Hyderabad",
+      "customerRating": 4.9
+    },
+    {
+      "id": "w2",
+      "name": "Luxury White Acrylic Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹85,000",
+      "material": "Premium Plywood",
+      "dimensions": "8ft x 8ft x 2ft",
+      "woodFinish": "Acrylic Gloss",
+      "warranty": "10 Years",
+      "deliveryTime": "21 Days",
+      "features": ["Internal LED Lighting", "Tinted Glass Elements", "Pull-out Drawers"],
+      "filters": {
+        "colour": ["White"],
+        "finish": ["Gloss", "Acrylic"],
+        "style": ["Luxury", "Premium"]
+      },
+      "images": ["assets/wardrobe_white_acrylic.png", "assets/wardrobe_white_acrylic.png"],
+      "projectLocation": "Jubilee Hills, Hyderabad",
+      "customerRating": 5.0
+    },
+    {
+      "id": "w3",
+      "name": "Modern Grey Gloss Sliding Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹55,000",
+      "material": "MDF & PU Gloss",
+      "dimensions": "7ft x 6ft x 2ft",
+      "woodFinish": "Gloss PU",
+      "warranty": "7 Years",
+      "deliveryTime": "18 Days",
+      "features": ["Sliding Mechanism", "Space Saving", "Scratch Resistant"],
+      "filters": {
+        "colour": ["Grey"],
+        "finish": ["Gloss"],
+        "style": ["Modern"]
+      },
+      "images": ["assets/wardrobe_grey_gloss.png", "assets/wardrobe_grey_gloss.png"],
+      "projectLocation": "Madhapur, Hyderabad",
+      "customerRating": 4.8
+    },
+    {
+      "id": "w4",
+      "name": "Classic Walnut Laminate Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹48,000",
+      "material": "Commercial Plywood",
+      "dimensions": "7ft x 7ft x 2ft",
+      "woodFinish": "Textured Laminate",
+      "warranty": "5 Years",
+      "deliveryTime": "14 Days",
+      "features": ["Wood Grain Texture", "Brass Handles", "Sturdy Build"],
+      "filters": {
+        "colour": ["Brown", "Walnut"],
+        "finish": ["Laminate", "Matte"],
+        "style": ["Classic", "Traditional"]
+      },
+      "images": ["assets/wardrobe.png", "assets/wardrobe.png"],
+      "projectLocation": "Vanasthalipuram, Hyderabad",
+      "customerRating": 4.6
+    },
+    {
+      "id": "w5",
+      "name": "Premium Oak Natural Wood Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹110,000",
+      "material": "Solid Oak Wood",
+      "dimensions": "8ft x 7ft x 2ft",
+      "woodFinish": "Natural Polish",
+      "warranty": "15 Years",
+      "deliveryTime": "30 Days",
+      "features": ["Hand-crafted Details", "Solid Wood Frame", "Timeless Design"],
+      "filters": {
+        "colour": ["Brown", "Oak"],
+        "finish": ["Natural Wood"],
+        "style": ["Classic", "Premium", "Luxury"]
+      },
+      "images": ["assets/wardrobe.png", "assets/wardrobe.png"],
+      "projectLocation": "Gachibowli, Hyderabad",
+      "customerRating": 4.9
+    },
+    {
+      "id": "w6",
+      "name": "Minimalist White PVC Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹35,000",
+      "material": "PVC Foam Board",
+      "dimensions": "6ft x 6ft x 2ft",
+      "woodFinish": "Matte PVC",
+      "warranty": "3 Years",
+      "deliveryTime": "10 Days",
+      "features": ["100% Waterproof", "Termite Proof", "Lightweight"],
+      "filters": {
+        "colour": ["White"],
+        "finish": ["PVC", "Matte"],
+        "style": ["Minimal", "Modern"]
+      },
+      "images": ["assets/wardrobe_white_acrylic.png", "assets/wardrobe_white_acrylic.png"],
+      "projectLocation": "Kukatpally, Hyderabad",
+      "customerRating": 4.5
+    },
+    {
+      "id": "w7",
+      "name": "Luxury Teak Wood Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹130,000",
+      "material": "Premium Teak Wood",
+      "dimensions": "8ft x 8ft x 2.5ft",
+      "woodFinish": "High Gloss Polish",
+      "warranty": "Lifetime",
+      "deliveryTime": "45 Days",
+      "features": ["Intricate Carvings", "Heavy Duty", "Rich Grain Texture"],
+      "filters": {
+        "colour": ["Brown", "Teak"],
+        "finish": ["Natural Wood", "Gloss"],
+        "style": ["Luxury", "Premium", "Traditional"]
+      },
+      "images": ["assets/wardrobe.png", "assets/wardrobe.png"],
+      "projectLocation": "Secunderabad",
+      "customerRating": 5.0
+    },
+    {
+      "id": "w8",
+      "name": "Grey Matte Laminate Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹42,000",
+      "material": "Particle Board & Laminate",
+      "dimensions": "7ft x 5ft x 2ft",
+      "woodFinish": "Matte Laminate",
+      "warranty": "4 Years",
+      "deliveryTime": "12 Days",
+      "features": ["Affordable", "Clean Look", "Compact Design"],
+      "filters": {
+        "colour": ["Grey"],
+        "finish": ["Matte", "Laminate"],
+        "style": ["Minimal", "Modern"]
+      },
+      "images": ["assets/wardrobe_grey_gloss.png", "assets/wardrobe_grey_gloss.png"],
+      "projectLocation": "L.B. Nagar, Hyderabad",
+      "customerRating": 4.4
+    },
+    {
+      "id": "w9",
+      "name": "Black Gloss Acrylic Wardrobe",
+      "category": "Wardrobes",
+      "price": "₹75,000",
+      "material": "MDF & Acrylic",
+      "dimensions": "8ft x 6ft x 2ft",
+      "woodFinish": "High Gloss Acrylic",
+      "warranty": "8 Years",
+      "deliveryTime": "20 Days",
+      "features": ["Mirror Finish", "Sleek Handles", "Premium Interior"],
+      "filters": {
+        "colour": ["Black"],
+        "finish": ["Gloss", "Acrylic"],
+        "style": ["Luxury", "Modern"]
+      },
+      "images": ["assets/wardrobe_black_matte.png", "assets/wardrobe_black_matte.png"],
+      "projectLocation": "Hitech City, Hyderabad",
+      "customerRating": 4.7
+    }
+  ]
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Srinivas Interiors</title>
+    <meta name="description" content="Explore our complete custom furniture services: modular wardrobes, kitchen cabinets, TV units, wooden doors, and aluminium works.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .service-badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 1rem 0 1.5rem;
+        }
+        .service-badge {
+            background: rgba(197, 160, 89, 0.15);
+            color: var(--color-gold);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+        }
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.8rem;
+            text-align: left;
+        }
+        .service-features li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--color-gold);
+            font-weight: bold;
+        }
+        .service-card-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+        .services-wrapper {
+            background-color: #15110F;
+            padding: 4rem 0 6rem 0;
+        }
+        .core-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+    </style>
+</head>
+<body style="background-color: #15110F; color: #FFFFFF;">
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    <div class="page-transition"></div>
+
+        <!-- Header -->
+    <header class="header glass" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrap">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-text">SRINIVAS</span>
+                    <span class="logo-subtext">INTERIORS & CARPENTRY</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html" class="nav-link ">HOME</a></li>
+                    <li><a href="about.html" class="nav-link ">ABOUT US</a></li>
+                    <li><a href="services.html" class="nav-link active">SERVICES</a></li>
+                    <li><a href="gallery.html" class="nav-link ">PROJECTS</a></li>
+                    <li><a href="contact.html" class="nav-link ">CONTACT</a></li>
+                    <li><a href="contact.html" class="btn btn-primary" style="margin-left: 15px; padding: 12px 24px;">GET A QUOTE</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Solid Luxury Header Banner (No Image Overlay) -->
+    <section class="services-header-banner">
+        <div class="container">
+            <span class="hero-badge"><i class="fas fa-crown"></i> Family-Owned Excellence</span>
+            <h1 class="page-title">Custom Carpentry & Interiors</h1>
+            <p class="page-subtitle">Precision engineering & bespoke manufacturing tailored for every room in your home.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-wrapper">
+        <div class="container">
+            <div class="core-grid">
+                
+                <!-- 1. Modular Wardrobes -->
+                <div class="service-card">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/wardrobe (1).png" alt="Modular Wardrobes">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title" style="color: #FFFFFF; font-size: 1.8rem; font-family: 'Cinzel', serif;">Modular Wardrobes</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Space-saving, custom-built bedroom storage designed for lifetime durability and luxury aesthetics.</p>
+                            
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Available Sub-Categories & Styles</h5>
+                            <div class="service-badge-list">
+                                <span class="service-badge">Sliding Wardrobes</span>
+                                <span class="service-badge">Hinged Wardrobes</span>
+                                <span class="service-badge">Mirror Wardrobes</span>
+                                <span class="service-badge">Walk-in Wardrobes</span>
+                                <span class="service-badge">Kids Wardrobes</span>
+                                <span class="service-badge">Luxury Wood Texture</span>
+                            </div>
+
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Key Specifications</h5>
+                            <ul class="service-features">
+                                <li>BWP Marine Plywood & HDMR Core</li>
+                                <li>Matte, High-Gloss, Acrylic & Veneer Finishes</li>
+                                <li>Custom Internal Drawers, Hangers & Lofts</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-actions">
+                            <a href="gallery.html?cat=wardrobes" class="btn btn-outline" style="padding: 10px 20px; flex: 1; text-align: center;">View Gallery</a>
+                            <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Modular%20Wardrobes." target="_blank" class="btn" style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; flex: 1;"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Kitchen Cabinets -->
+                <div class="service-card">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/kitchen (1).png" alt="Kitchen Cabinets">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title" style="color: #FFFFFF; font-size: 1.8rem; font-family: 'Cinzel', serif;">Modular Kitchen Cabinets</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Ergonomic, modern kitchens manufactured with 100% waterproof and termite-proof core materials.</p>
+                            
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Available Layouts & Finishes</h5>
+                            <div class="service-badge-list">
+                                <span class="service-badge">L-Shape Kitchen</span>
+                                <span class="service-badge">U-Shape Kitchen</span>
+                                <span class="service-badge">Parallel Kitchen</span>
+                                <span class="service-badge">Island Kitchen</span>
+                                <span class="service-badge">PVC & Acrylic Kitchen</span>
+                                <span class="service-badge">Gloss & Matte Finish</span>
+                            </div>
+
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Key Specifications</h5>
+                            <ul class="service-features">
+                                <li>Soft-close Blum/Hettich drawer systems</li>
+                                <li>Boiling Water Proof (BWP) Plywood</li>
+                                <li>Quartz countertop integration</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-actions">
+                            <a href="gallery.html?cat=kitchen" class="btn btn-outline" style="padding: 10px 20px; flex: 1; text-align: center;">View Gallery</a>
+                            <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Modular%20Kitchen%20Cabinets." target="_blank" class="btn" style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; flex: 1;"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. TV Units & Wall Paneling -->
+                <div class="service-card">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/TVunit (5).png" alt="TV Units & Wall Paneling">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title" style="color: #FFFFFF; font-size: 1.8rem; font-family: 'Cinzel', serif;">TV Units & Wall Paneling</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Architectural living room entertainment centers crafted with ambient profile lighting and seamless storage.</p>
+                            
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Available Styles & Features</h5>
+                            <div class="service-badge-list">
+                                <span class="service-badge">Wall Mounted Units</span>
+                                <span class="service-badge">Floating TV Units</span>
+                                <span class="service-badge">LED Profile Units</span>
+                                <span class="service-badge">Storage TV Units</span>
+                                <span class="service-badge">Wood Finish Paneling</span>
+                            </div>
+
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Key Specifications</h5>
+                            <ul class="service-features">
+                                <li>Concealed wire management channels</li>
+                                <li>Charcoal & Louver wooden paneling</li>
+                                <li>Integrated glass display shelves</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-actions">
+                            <a href="gallery.html?cat=tv" class="btn btn-outline" style="padding: 10px 20px; flex: 1; text-align: center;">View Gallery</a>
+                            <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20TV%20Units%20%26%20Wall%20Paneling." target="_blank" class="btn" style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; flex: 1;"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Doors & Windows -->
+                <div class="service-card">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/door.png" alt="Wooden Doors & Windows">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title" style="color: #FFFFFF; font-size: 1.8rem; font-family: 'Cinzel', serif;">Wooden Doors & Windows</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Solid teak and designer wood doors engineered for security, elegance, and lifetime weather resistance.</p>
+                            
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Available Types & Designs</h5>
+                            <div class="service-badge-list">
+                                <span class="service-badge">Teak Wood Main Door</span>
+                                <span class="service-badge">Designer CNC Doors</span>
+                                <span class="service-badge">Bedroom Doors</span>
+                                <span class="service-badge">Pooja Room Doors</span>
+                                <span class="service-badge">Wooden Sliding Windows</span>
+                            </div>
+
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Key Specifications</h5>
+                            <ul class="service-features">
+                                <li>100% Solid Teak Wood Frame & Panels</li>
+                                <li>Intricate hand carvings & CNC designs</li>
+                                <li>High-grade PU varnish polish</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-actions">
+                            <a href="gallery.html?cat=doors" class="btn btn-outline" style="padding: 10px 20px; flex: 1; text-align: center;">View Gallery</a>
+                            <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Wooden%20Doors%20%26%20Windows." target="_blank" class="btn" style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; flex: 1;"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Aluminium & Glass Works -->
+                <div class="service-card">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/aluminium.png" alt="Aluminium & Glass Works">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title" style="color: #FFFFFF; font-size: 1.8rem; font-family: 'Cinzel', serif;">Aluminium & Glass Works</h3>
+                            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Slim-profile powder-coated aluminium fabrications, glass partitions, and mosquito mesh installations.</p>
+                            
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Available Applications</h5>
+                            <div class="service-badge-list">
+                                <span class="service-badge">Aluminium Sliding Doors</span>
+                                <span class="service-badge">Office Glass Partitions</span>
+                                <span class="service-badge">Balcony Safety Works</span>
+                                <span class="service-badge">SS Mosquito Mesh</span>
+                                <span class="service-badge">Toughened Glass Windows</span>
+                            </div>
+
+                            <h5 style="color: var(--color-gold); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Key Specifications</h5>
+                            <ul class="service-features">
+                                <li>Powder-coated anodized aluminium track</li>
+                                <li>Toughened acoustic glass partitions</li>
+                                <li>Rustproof SS 304 mosquito mesh</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-actions">
+                            <a href="gallery.html?cat=aluminium" class="btn btn-outline" style="padding: 10px 20px; flex: 1; text-align: center;">View Gallery</a>
+                            <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Aluminium%20%26%20Glass%20Works." target="_blank" class="btn" style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; flex: 1;"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <!-- Universal Luxury High-Contrast Footer -->
+    <footer class="footer" style="background-color: #1C1613; color: #FFFFFF; padding: 4rem 0 2rem 0; border-top: 2px solid #C5A059;">
+        <div class="container">
+            <div class="footer-top" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; text-align: left;">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                        <div class="logo-icon-wrap" style="width: 40px; height: 40px; background: #C5A059; color: #1C1613; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <div class="logo-text-group">
+                            <span class="logo-text" style="color: #FFFFFF; font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 800; letter-spacing: 2px;">SRINIVAS</span>
+                            <span class="logo-subtext" style="color: #C5A059; font-size: 0.65rem; letter-spacing: 3px; font-weight: 700;">INTERIORS & CARPENTRY</span>
+                        </div>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.85); line-height: 1.6; font-size: 0.95rem;">Bespoke furniture, modular kitchens, wardrobes, and aluminium architectural solutions crafted with precision and passion.</p>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="index.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Home</a></li>
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">About Us</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Services</a></li>
+                        <li><a href="gallery.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Projects Gallery</a></li>
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Core Services</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Modular Kitchens</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Modular Wardrobes</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">TV Panel Units</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Wooden Doors & Windows</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Aluminium & Glass Partitions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Owner Contact Details</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                        <li style="color: #FFFFFF; font-weight: 700; font-size: 1.05rem;"><i class="fas fa-user-tie" style="color: #C5A059; margin-right: 10px;"></i> Srinivasarao Vasamsetti <span style="font-weight: 400; color: #C5A059; font-size: 0.85rem; display: block; margin-left: 24px;">(Owner & Master Craftsman)</span></li>
+                        <li><a href="tel:+918341745511" style="color: #FFFFFF; text-decoration: none; font-size: 0.95rem; font-weight: 600;"><i class="fas fa-phone-alt" style="color: #C5A059; margin-right: 10px;"></i> +91 83417 45511</a></li>
+                        <li><a href="https://wa.me/918341745511" style="color: #25D366; text-decoration: none; font-size: 0.95rem; font-weight: 600;"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> WhatsApp Consultation</a></li>
+                        <li><a href="mailto:info@srinivasinteriors.com" style="color: #FFFFFF; text-decoration: none; font-size: 0.95rem;"><i class="fas fa-envelope" style="color: #C5A059; margin-right: 10px;"></i> info@srinivasinteriors.com</a></li>
+                        <li style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><i class="fas fa-map-marker-alt" style="color: #C5A059; margin-right: 10px;"></i> Hyderabad, Telangana, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.88rem; margin: 0;">&copy; 2026 Srinivas Interiors & Carpentry. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.2rem;">
+                    <a href="#" style="color: #C5A059; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #C5A059; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918341745511" style="color: #25D366; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <a href="#" class="fab-btn fab-top" id="fabTop" title="Back to Top"><i class="fas fa-arrow-up"></i></a>
+        <a href="contact.html" class="fab-btn fab-call" title="Get Quote" style="background-color: var(--color-primary);"><i class="fas fa-envelope-open-text"></i></a>
+        <a href="tel:+918341745511" class="fab-btn fab-call" title="Call Now"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/918341745511" class="fab-btn fab-whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

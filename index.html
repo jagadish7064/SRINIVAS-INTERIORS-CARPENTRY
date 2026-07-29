@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinivas Interiors | Premium Custom Furniture</title>
+    <meta name="description" content="Premium family-owned carpentry and interior design company in Hyderabad. Luxury custom furniture, modular wardrobes, and kitchen cabinets.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Using inline Font Awesome for quick icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background-color: #15110F; color: #FFFFFF;">
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+
+        <!-- Header -->
+    <header class="header glass" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrap">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-text">SRINIVAS</span>
+                    <span class="logo-subtext">INTERIORS & CARPENTRY</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html" class="nav-link active">HOME</a></li>
+                    <li><a href="about.html" class="nav-link ">ABOUT US</a></li>
+                    <li><a href="services.html" class="nav-link ">SERVICES</a></li>
+                    <li><a href="gallery.html" class="nav-link ">PROJECTS</a></li>
+                    <li><a href="contact.html" class="nav-link ">CONTACT</a></li>
+                    <li><a href="contact.html" class="btn btn-primary" style="margin-left: 15px; padding: 12px 24px;">GET A QUOTE</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Interactive Hero Slider Carousel -->
+    <section class="hero-slider-container">
+        <div class="hero-slider-track">
+
+        <!-- Slide 1: Modular Kitchens -->
+        <div class="hero-slide active">
+            <div class="hero-slide-bg crop-wrap">
+                <img src="assets/kitchen (1).png" alt="Luxury Modular Kitchen">
+            </div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span class="hero-badge"><i class="fas fa-crown"></i> Modular Kitchen Architecture</span>
+                <h1 class="hero-title-sample">LUXURY MODULAR <span class="gold-text">KITCHEN CABINTRY & ISLANDS</span></h1>
+                <p class="hero-subtitle" style="font-size: 1.15rem; letter-spacing: 1px; font-weight: 500; color: rgba(255,255,255,0.92); margin-bottom: 2rem;">Custom L-Shape, U-Shape & Island Kitchens engineered with Boiling Water Proof Marine Plywood & Soft-Close Hardware.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn-hero-gold"><i class="fas fa-utensils"></i> EXPLORE KITCHENS</a>
+                    <a href="#quote-section" class="btn-hero-outline"><i class="fas fa-calculator"></i> GET FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Modular Wardrobes -->
+        <div class="hero-slide">
+            <div class="hero-slide-bg crop-wrap">
+                <img src="assets/wardrobe (1).png" alt="Bespoke Wardrobe Design">
+            </div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span class="hero-badge"><i class="fas fa-gem"></i> Custom Bedroom Storage</span>
+                <h1 class="hero-title-sample">BESPOKE MODULAR <span class="gold-text">WARDROBES & WALK-IN STORAGE</span></h1>
+                <p class="hero-subtitle" style="font-size: 1.15rem; letter-spacing: 1px; font-weight: 500; color: rgba(255,255,255,0.92); margin-bottom: 2rem;">Custom veneer, high-gloss acrylic shutters, integrated LED lofts, and soft-close sliding door systems.</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html?cat=wardrobes" class="btn-hero-gold"><i class="fas fa-door-closed"></i> EXPLORE WARDROBES</a>
+                    <a href="#quote-section" class="btn-hero-outline"><i class="fas fa-calculator"></i> GET FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: TV Units -->
+        <div class="hero-slide">
+            <div class="hero-slide-bg crop-wrap">
+                <img src="assets/TVunit (5).png" alt="Luxury TV Panel Unit">
+            </div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span class="hero-badge"><i class="fas fa-tv"></i> Living Room Centerpieces</span>
+                <h1 class="hero-title-sample">ARCHITECTURAL <span class="gold-text">TV UNITS & WALL PANELING</span></h1>
+                <p class="hero-subtitle" style="font-size: 1.15rem; letter-spacing: 1px; font-weight: 500; color: rgba(255,255,255,0.92); margin-bottom: 2rem;">Floating entertainment units with integrated warm LED profile lighting, charcoal louver paneling, and concealed wiring.</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html?cat=tv" class="btn-hero-gold"><i class="fas fa-tv"></i> EXPLORE TV UNITS</a>
+                    <a href="#quote-section" class="btn-hero-outline"><i class="fas fa-calculator"></i> GET FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Wooden Doors -->
+        <div class="hero-slide">
+            <div class="hero-slide-bg crop-wrap">
+                <img src="assets/door.png" alt="Solid Teak Wooden Door">
+            </div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span class="hero-badge"><i class="fas fa-door-open"></i> Solid Teak Woodwork</span>
+                <h1 class="hero-title-sample">SOLID TEAK WOOD <span class="gold-text">MAIN DOORS & CARVINGS</span></h1>
+                <p class="hero-subtitle" style="font-size: 1.15rem; letter-spacing: 1px; font-weight: 500; color: rgba(255,255,255,0.92); margin-bottom: 2rem;">Hand-carved main entry doors, designer CNC bedroom doors, and weatherproof wooden window frames.</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html?cat=doors" class="btn-hero-gold"><i class="fas fa-door-open"></i> EXPLORE DOORS</a>
+                    <a href="#quote-section" class="btn-hero-outline"><i class="fas fa-calculator"></i> GET FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Aluminium Works -->
+        <div class="hero-slide">
+            <div class="hero-slide-bg crop-wrap">
+                <img src="assets/aluminium.png" alt="Aluminium & Glass Partitions">
+            </div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span class="hero-badge"><i class="fas fa-drafting-compass"></i> Aluminium & Glass Fabrication</span>
+                <h1 class="hero-title-sample">PRECISION ALUMINIUM <span class="gold-text">SLIDING & GLASS PARTITIONS</span></h1>
+                <p class="hero-subtitle" style="font-size: 1.15rem; letter-spacing: 1px; font-weight: 500; color: rgba(255,255,255,0.92); margin-bottom: 2rem;">Slim-profile glass sliding doors, office room partitions, SS mosquito mesh, and balcony safety installations.</p>
+                <div class="hero-buttons">
+                    <a href="gallery.html?cat=aluminium" class="btn-hero-gold"><i class="fas fa-border-all"></i> EXPLORE ALUMINIUM</a>
+                    <a href="#quote-section" class="btn-hero-outline"><i class="fas fa-calculator"></i> GET FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <button class="slider-arrow prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="slider-dots">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+    </section>
+
+    <!-- About Section (Split Layout) -->
+    <section id="about" class="section" style="background-color: #15110F !important; padding: 6rem 0;">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 4.5rem;">
+                <div class="about-image crop-wrap" style="border-radius: var(--radius-lg); box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 1px solid rgba(197, 160, 89, 0.4);">
+                    <img src="assets/tvunit (1).png" alt="Craftsmanship & Luxury Interior Design">
+                </div>
+                <div class="about-content fade-in-up delay-2">
+                    <span style="color: var(--color-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; display: block; margin-bottom: 0.5rem;"><i class="fas fa-crown" style="margin-right: 6px;"></i> Our Heritage</span>
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem; color: #FFFFFF; font-family: 'Cinzel', serif; line-height: 1.25;">Master Woodworking & <span style="color: var(--color-gold);">Luxury Interiors</span></h2>
+                    
+                    <div style="border-left: 3px solid var(--color-gold); padding: 1rem 1.25rem; background: rgba(197, 160, 89, 0.06); border-radius: 0 12px 12px 0; margin-bottom: 1.8rem;">
+                        <p style="font-size: 1.1rem; margin-bottom: 0; color: #FFFFFF; line-height: 1.85;">
+                            Founded by master craftsman <strong style="color: var(--color-gold);">Srinivasarao Vasamsetti</strong>, <span style="color: var(--color-gold); font-weight: 700;">Srinivas Interiors</span> is a family-owned carpentry & interior design company based in Hyderabad. We specialize in transforming houses into luxurious homes through bespoke furniture.
+                        </p>
+                    </div>
+
+                    <p style="font-size: 1.05rem; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.82); line-height: 1.8;">
+                        Combining traditional woodworking expertise with modern state-of-the-art CNC precision manufacturing, our team delivers 100% Boiling Water Proof (BWP) Marine wood interiors built to endure for generations.
+                    </p>
+                    
+                    <div style="display: flex; gap: 2rem; margin-bottom: 2.2rem; padding-top: 1rem; border-top: 1px solid rgba(197, 160, 89, 0.2);">
+                        <div>
+                            <h3 style="font-size: 2.2rem; color: var(--color-gold); margin-bottom: 0; font-family: 'Cinzel', serif; font-weight: 700;">15+</h3>
+                            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); margin-bottom: 0;">Years Experience</p>
+                        </div>
+                        <div style="border-left: 1px solid rgba(255,255,255,0.15); padding-left: 2rem;">
+                            <h3 style="font-size: 2.2rem; color: var(--color-gold); margin-bottom: 0; font-family: 'Cinzel', serif; font-weight: 700;">500+</h3>
+                            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); margin-bottom: 0;">Projects Delivered</p>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-outline"><i class="fas fa-book-open" style="margin-right: 8px;"></i> READ OUR FULL STORY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h5 class="fade-in-up" style="text-align: center; color: var(--color-gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Our Expertise</h5>
+            <h2 class="section-title fade-in-up delay-1">Premium Services</h2>
+            
+            <div class="grid grid-3">
+                <div class="service-card fade-in-up delay-1">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/wardrobe (1).png" alt="Modular Wardrobes">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Modular Wardrobes</h3>
+                        <p>Elegant, space-saving designs customized for your bedroom with premium finishes.</p>
+                        <a href="services.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in-up delay-2">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/kitchen (3).png" alt="Kitchen Cabinets">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Kitchen Cabinets</h3>
+                        <p>Functional and stunning modern kitchens tailored to your cooking style.</p>
+                        <a href="services.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in-up delay-3">
+                    <div class="service-img-wrap crop-wrap">
+                        <img src="assets/TVunit (5).png" alt="TV Units & Wall Paneling">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">TV Units</h3>
+                        <p>Sophisticated entertainment centers that become the focal point of your living room.</p>
+                        <a href="services.html" class="btn btn-outline" style="margin-top: 1rem;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="btn btn-primary fade-in-up delay-2">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instant Project Quotation & Estimate Section (Ultra High Contrast Dark) -->
+    <section id="quote-section" class="section section-dark" style="background-color: #1C1613 !important; color: #FFFFFF !important; padding: 5rem 0; border-top: 3px solid #C5A059;">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
+                <div>
+                    <span class="hero-badge"><i class="fas fa-calculator"></i> Free Cost Estimate</span>
+                    <h2 style="font-size: 3.2rem; color: #FFFFFF !important; margin: 1rem 0; font-family: 'Cinzel', serif; line-height: 1.2;">Get An Instant Free Quotation For Your Dream Home</h2>
+                    <p style="color: rgba(255,255,255,0.92) !important; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.7;">Plan your interior budget with zero obligations. Share your requirements and our master carpenter team will prepare a detailed cost estimate within 24 hours.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: #C5A059; font-size: 1.5rem;"></i>
+                            <span style="font-size: 1.1rem; color: #FFFFFF !important; font-weight: 600;">100% Transparent Factory Pricing</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: #C5A059; font-size: 1.5rem;"></i>
+                            <span style="font-size: 1.1rem; color: #FFFFFF !important; font-weight: 600;">Boiling Water Proof (BWP) Marine Materials</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: #C5A059; font-size: 1.5rem;"></i>
+                            <span style="font-size: 1.1rem; color: #FFFFFF !important; font-weight: 600;">10-Year Warranty & Free On-Site Inspection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card-dark fade-in-up">
+                    <span style="color: var(--color-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem;">INSTANT ESTIMATE</span>
+                    <h3 style="font-size: 2rem; margin-bottom: 0.5rem; color: #FFFFFF; font-family: 'Cinzel', serif;">Request Custom Quote</h3>
+                    <p style="color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 2rem;">Fill out the details below and we will contact you immediately.</p>
+                    
+                    <form onsubmit="alert('Thank you! Your quotation request has been received. We will call you shortly.'); return false;">
+                        <div class="form-group-dark">
+                            <label class="form-label-dark">Full Name *</label>
+                            <input type="text" class="form-control-dark" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group-dark">
+                            <label class="form-label-dark">Phone Number / WhatsApp *</label>
+                            <input type="tel" class="form-control-dark" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group-dark" style="margin-bottom: 2rem;">
+                            <label class="form-label-dark">Select Required Service *</label>
+                            <select class="form-control-dark" required>
+                                <option value="" disabled selected>Choose Service...</option>
+                                <option value="kitchen">Modular Kitchen Cabinets</option>
+                                <option value="wardrobe">Modular Wardrobes & Storage</option>
+                                <option value="tv">TV Units & Wall Paneling</option>
+                                <option value="doors">Wooden Doors & Windows</option>
+                                <option value="aluminium">Aluminium & Glass Partitions</option>
+                                <option value="fullhome">Full Home Interior Works</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-hero-gold" style="width: 100%; cursor: pointer;">SUBMIT FOR FREE ESTIMATE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us & Work Process -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Our Work Process</h2>
+            <p class="section-subtitle fade-in-up delay-1">A seamless journey from concept to completion, ensuring absolute perfection at every step.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 1</div>
+                        <h3>Consultation</h3>
+                        <p>We discuss your vision, requirements, and budget to understand your unique lifestyle.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 2</div>
+                        <h3>Site Visit</h3>
+                        <p>Our experts take precise measurements and assess the architectural flow of your space.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 3</div>
+                        <h3>3D Design</h3>
+                        <p>We create realistic 3D renderings so you can visualize the final outcome before production begins.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 4</div>
+                        <h3>Material Selection</h3>
+                        <p>Choose from our curated collection of premium woods, laminates, and luxury finishes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 5</div>
+                        <h3>Manufacturing</h3>
+                        <p>Our master craftsmen bring the designs to life using state-of-the-art machinery and hand-finished details.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 6</div>
+                        <h3>Installation</h3>
+                        <p>Clean, efficient, and precise installation by our professional team.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">Step 7</div>
+                        <h3>Customer Satisfaction</h3>
+                        <p>A final walkthrough to ensure every detail meets our rigorous standards and exceeds your expectations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features List -->
+            <div class="grid grid-4" style="margin-top: 6rem; text-align: center;">
+                <div class="fade-in-up delay-1">
+                    <i class="fas fa-gem" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                    <h4 style="font-family: 'Cinzel', serif; font-weight: 600; color: #FFFFFF;">Premium Materials</h4>
+                </div>
+                <div class="fade-in-up delay-2">
+                    <i class="fas fa-hammer" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                    <h4 style="font-family: 'Cinzel', serif; font-weight: 600; color: #FFFFFF;">Experienced Craftsmanship</h4>
+                </div>
+                <div class="fade-in-up delay-3">
+                    <i class="fas fa-drafting-compass" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                    <h4 style="font-family: 'Cinzel', serif; font-weight: 600; color: #FFFFFF;">Custom Design</h4>
+                </div>
+                <div class="fade-in-up delay-4">
+                    <i class="fas fa-award" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                    <h4 style="font-family: 'Cinzel', serif; font-weight: 600; color: #FFFFFF;">Perfect Finishing</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-in-up text-center">Client Experiences</h2>
+            <div class="grid grid-3">
+                <div class="contact-card-dark fade-in-up delay-1" style="padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="https://ui-avatars.com/api/?name=Rajesh+Kumar&background=C5A059&color=1C1613&rounded=true" alt="Rajesh K." style="width: 50px; height: 50px;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem; color: #FFFFFF; font-family: 'Cinzel', serif;">Rajesh Kumar</h4>
+                            <div style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: rgba(255,255,255,0.85);">"Excellent craftsmanship and premium finishing."</p>
+                </div>
+                
+                <div class="contact-card-dark fade-in-up delay-2" style="padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="https://ui-avatars.com/api/?name=Anjali+Menon&background=C5A059&color=1C1613&rounded=true" alt="Anjali M." style="width: 50px; height: 50px;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem; color: #FFFFFF; font-family: 'Cinzel', serif;">Anjali Menon</h4>
+                            <div style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: rgba(255,255,255,0.85);">"Our modular kitchen was completed on time."</p>
+                </div>
+
+                <div class="contact-card-dark fade-in-up delay-3" style="padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="https://ui-avatars.com/api/?name=Vikram+Reddy&background=C5A059&color=1C1613&rounded=true" alt="Vikram R." style="width: 50px; height: 50px;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem; color: #FFFFFF; font-family: 'Cinzel', serif;">Vikram Reddy</h4>
+                            <div style="color: var(--color-gold); font-size: 0.9rem;">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: rgba(255,255,255,0.85);">"Affordable pricing with excellent quality."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <!-- Universal Luxury High-Contrast Footer -->
+    <footer class="footer" style="background-color: #1C1613; color: #FFFFFF; padding: 4rem 0 2rem 0; border-top: 2px solid #C5A059;">
+        <div class="container">
+            <div class="footer-top" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; text-align: left;">
+                <div>
+                    <a href="index.html" class="logo footer-logo" style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                        <div class="logo-icon-wrap" style="width: 40px; height: 40px; background: #C5A059; color: #1C1613; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <div class="logo-text-group">
+                            <span class="logo-text" style="color: #FFFFFF; font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 800; letter-spacing: 2px;">SRINIVAS</span>
+                            <span class="logo-subtext" style="color: #C5A059; font-size: 0.65rem; letter-spacing: 3px; font-weight: 700;">INTERIORS & CARPENTRY</span>
+                        </div>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.85); line-height: 1.6; font-size: 0.95rem;">Bespoke furniture, modular kitchens, wardrobes, and aluminium architectural solutions crafted with precision and passion.</p>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="index.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Home</a></li>
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">About Us</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Services</a></li>
+                        <li><a href="gallery.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Projects Gallery</a></li>
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Core Services</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Modular Kitchens</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Modular Wardrobes</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">TV Panel Units</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Wooden Doors & Windows</a></li>
+                        <li><a href="services.html" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem;">Aluminium & Glass Partitions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #C5A059; text-transform: uppercase; font-size: 1rem; letter-spacing: 1.5px; margin-bottom: 1.2rem; font-weight: 700;">Owner Contact Details</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                        <li style="color: #FFFFFF; font-weight: 700; font-size: 1.05rem;"><i class="fas fa-user-tie" style="color: #C5A059; margin-right: 10px;"></i> Srinivasarao Vasamsetti <span style="font-weight: 400; color: #C5A059; font-size: 0.85rem; display: block; margin-left: 24px;">(Owner & Master Craftsman)</span></li>
+                        <li><a href="tel:+918341745511" style="color: #FFFFFF; text-decoration: none; font-size: 0.95rem; font-weight: 600;"><i class="fas fa-phone-alt" style="color: #C5A059; margin-right: 10px;"></i> +91 83417 45511</a></li>
+                        <li><a href="https://wa.me/918341745511" style="color: #25D366; text-decoration: none; font-size: 0.95rem; font-weight: 600;"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> WhatsApp Consultation</a></li>
+                        <li><a href="mailto:info@srinivasinteriors.com" style="color: #FFFFFF; text-decoration: none; font-size: 0.95rem;"><i class="fas fa-envelope" style="color: #C5A059; margin-right: 10px;"></i> info@srinivasinteriors.com</a></li>
+                        <li style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><i class="fas fa-map-marker-alt" style="color: #C5A059; margin-right: 10px;"></i> Hyderabad, Telangana, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.88rem; margin: 0;">&copy; 2026 Srinivas Interiors & Carpentry. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.2rem;">
+                    <a href="#" style="color: #C5A059; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #C5A059; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918341745511" style="color: #25D366; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <a href="#" class="fab-btn fab-top" id="fabTop" title="Back to Top"><i class="fas fa-arrow-up"></i></a>
+        <a href="contact.html" class="fab-btn fab-call" title="Get Quote" style="background-color: var(--color-primary);"><i class="fas fa-envelope-open-text"></i></a>
+        <a href="tel:+918341745511" class="fab-btn fab-call" title="Call Now"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/918341745511" class="fab-btn fab-whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
