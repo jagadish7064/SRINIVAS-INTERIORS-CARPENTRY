@@ -72,7 +72,7 @@ export default function Services() {
                         {/* 1. Modular Wardrobes */}
                         <div className="service-card">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/wardrobe (1).png" alt="Modular Wardrobes" />
+                                <img loading="lazy" decoding="async" src="/assets/wardrobe (1).png" alt="Modular Wardrobes" />
                             </div>
                             <div className="service-content">
                                 <div>
@@ -98,7 +98,7 @@ export default function Services() {
                                 </div>
                                 <div className="service-card-actions">
                                     <Link href="/gallery?cat=wardrobes" className="btn btn-outline" style={{ padding: "10px 20px", flex: 1, textAlign: "center" }}>View Gallery</Link>
-                                    <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Modular%20Wardrobes." target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                                    <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ export default function Services() {
                         {/* 2. Kitchen Cabinets */}
                         <div className="service-card">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/kitchen (1).png" alt="Kitchen Cabinets" />
+                                <img loading="lazy" decoding="async" src="/assets/kitchen (1).png" alt="Kitchen Cabinets" />
                             </div>
                             <div className="service-content">
                                 <div>
@@ -132,7 +132,7 @@ export default function Services() {
                                 </div>
                                 <div className="service-card-actions">
                                     <Link href="/gallery?cat=kitchen" className="btn btn-outline" style={{ padding: "10px 20px", flex: 1, textAlign: "center" }}>View Gallery</Link>
-                                    <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Modular%20Kitchen%20Cabinets." target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                                    <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ export default function Services() {
                         {/* 3. TV Units & Wall Paneling */}
                         <div className="service-card">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/TVunit (5).png" alt="TV Units & Wall Paneling" />
+                                <img loading="lazy" decoding="async" src="/assets/TVunit (5).png" alt="TV Units & Wall Paneling" />
                             </div>
                             <div className="service-content">
                                 <div>
@@ -165,7 +165,7 @@ export default function Services() {
                                 </div>
                                 <div className="service-card-actions">
                                     <Link href="/gallery?cat=tv" className="btn btn-outline" style={{ padding: "10px 20px", flex: 1, textAlign: "center" }}>View Gallery</Link>
-                                    <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20TV%20Units%20%26%20Wall%20Paneling." target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                                    <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@ export default function Services() {
                         {/* 4. Doors & Windows */}
                         <div className="service-card">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/door.png" alt="Wooden Doors & Windows" />
+                                <img loading="lazy" decoding="async" src="/assets/door.png" alt="Wooden Doors & Windows" />
                             </div>
                             <div className="service-content">
                                 <div>
@@ -198,7 +198,7 @@ export default function Services() {
                                 </div>
                                 <div className="service-card-actions">
                                     <Link href="/gallery?cat=doors" className="btn btn-outline" style={{ padding: "10px 20px", flex: 1, textAlign: "center" }}>View Gallery</Link>
-                                    <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Wooden%20Doors%20%26%20Windows." target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                                    <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@ export default function Services() {
                         {/* 5. Aluminium & Glass Works */}
                         <div className="service-card">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/aluminium.png" alt="Aluminium & Glass Works" />
+                                <img loading="lazy" decoding="async" src="/assets/aluminium.png" alt="Aluminium & Glass Works" />
                             </div>
                             <div className="service-content">
                                 <div>
@@ -231,7 +231,7 @@ export default function Services() {
                                 </div>
                                 <div className="service-card-actions">
                                     <Link href="/gallery?cat=aluminium" className="btn btn-outline" style={{ padding: "10px 20px", flex: 1, textAlign: "center" }}>View Gallery</Link>
-                                    <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors%2C%20I%20am%20interested%20in%20a%20price%20quotation%20for%20Aluminium%20%26%20Glass%20Works." target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
+                                    <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" className="btn" style={{ backgroundColor: "#25D366", color: "white", border: "none", padding: "10px 20px", fontWeight: 700, borderRadius: "6px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", flex: 1 }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp Quote</a>
                                 </div>
                             </div>
                         </div>

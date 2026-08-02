@@ -67,7 +67,7 @@ export default function Home() {
                 <div className="hero-slider-track">
                     <div className="hero-slide active">
                         <div className="hero-slide-bg crop-wrap">
-                            <img src="/assets/kitchen (1).png" alt="Luxury Modular Kitchen" />
+                            <img fetchpriority="high" src="/assets/kitchen (1).png" alt="Luxury Modular Kitchen" />
                         </div>
                         <div className="hero-slide-overlay"></div>
                         <div className="hero-slide-content">
@@ -83,7 +83,7 @@ export default function Home() {
 
                     <div className="hero-slide">
                         <div className="hero-slide-bg crop-wrap">
-                            <img src="/assets/wardrobe (1).png" alt="Bespoke Wardrobe Design" />
+                            <img loading="lazy" decoding="async" src="/assets/wardrobe (1).png" alt="Bespoke Wardrobe Design" />
                         </div>
                         <div className="hero-slide-overlay"></div>
                         <div className="hero-slide-content">
@@ -99,7 +99,7 @@ export default function Home() {
 
                     <div className="hero-slide">
                         <div className="hero-slide-bg crop-wrap">
-                            <img src="/assets/TVunit (5).png" alt="Luxury TV Panel Unit" />
+                            <img loading="lazy" decoding="async" src="/assets/TVunit (5).png" alt="Luxury TV Panel Unit" />
                         </div>
                         <div className="hero-slide-overlay"></div>
                         <div className="hero-slide-content">
@@ -115,7 +115,7 @@ export default function Home() {
 
                     <div className="hero-slide">
                         <div className="hero-slide-bg crop-wrap">
-                            <img src="/assets/door.png" alt="Solid Teak Wooden Door" />
+                            <img loading="lazy" decoding="async" src="/assets/door.png" alt="Solid Teak Wooden Door" />
                         </div>
                         <div className="hero-slide-overlay"></div>
                         <div className="hero-slide-content">
@@ -131,7 +131,7 @@ export default function Home() {
 
                     <div className="hero-slide">
                         <div className="hero-slide-bg crop-wrap">
-                            <img src="/assets/aluminium.png" alt="Aluminium & Glass Partitions" />
+                            <img loading="lazy" decoding="async" src="/assets/aluminium.png" alt="Aluminium & Glass Partitions" />
                         </div>
                         <div className="hero-slide-overlay"></div>
                         <div className="hero-slide-content">
@@ -162,7 +162,7 @@ export default function Home() {
                 <div className="container">
                     <div className="grid grid-2 resp-gap-lg" style={{ alignItems: "center" }}>
                         <div className="about-image crop-wrap" style={{ borderRadius: "var(--radius-lg)", boxShadow: "0 25px 60px rgba(0,0,0,0.6)", border: "1px solid rgba(197, 160, 89, 0.4)" }}>
-                            <img src="/assets/tvunit (1).png" alt="Craftsmanship & Luxury Interior Design" />
+                            <img loading="lazy" decoding="async" src="/assets/tvunit (1).png" alt="Craftsmanship & Luxury Interior Design" />
                         </div>
                         <div className="about-content fade-in-up delay-2">
                             <span style={{ color: "var(--color-gold)", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "3px", display: "block", marginBottom: "0.5rem" }}><i className="fas fa-crown" style={{ marginRight: "6px" }}></i> Our Heritage</span>
@@ -203,7 +203,7 @@ export default function Home() {
                     <div className="grid grid-3">
                         <div className="service-card fade-in-up delay-1">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/wardrobe (1).png" alt="Modular Wardrobes" />
+                                <img loading="lazy" decoding="async" src="/assets/wardrobe (1).png" alt="Modular Wardrobes" />
                             </div>
                             <div className="service-content">
                                 <h3 className="service-title">Modular Wardrobes</h3>
@@ -214,7 +214,7 @@ export default function Home() {
                         
                         <div className="service-card fade-in-up delay-2">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/kitchen (3).png" alt="Kitchen Cabinets" />
+                                <img loading="lazy" decoding="async" src="/assets/kitchen (3).png" alt="Kitchen Cabinets" />
                             </div>
                             <div className="service-content">
                                 <h3 className="service-title">Kitchen Cabinets</h3>
@@ -225,7 +225,7 @@ export default function Home() {
                         
                         <div className="service-card fade-in-up delay-3">
                             <div className="service-img-wrap crop-wrap">
-                                <img src="/assets/TVunit (5).png" alt="TV Units & Wall Paneling" />
+                                <img loading="lazy" decoding="async" src="/assets/TVunit (5).png" alt="TV Units & Wall Paneling" />
                             </div>
                             <div className="service-content">
                                 <h3 className="service-title">TV Units</h3>
@@ -389,7 +389,7 @@ export default function Home() {
                     <div className="grid grid-3">
                         <div className="contact-card-dark fade-in-up delay-1" style={{ padding: "2rem" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-                                <img src="https://ui-avatars.com/api/?name=Rajesh+Kumar&background=C5A059&color=1C1613&rounded=true" alt="Rajesh K." style={{ width: "50px", height: "50px" }} />
+                                <img loading="lazy" decoding="async" src="https://ui-avatars.com/api/?name=Rajesh+Kumar&background=C5A059&color=1C1613&rounded=true" alt="Rajesh K." style={{ width: "50px", height: "50px" }} />
                                 <div>
                                     <h4 style={{ margin: 0, fontSize: "1.1rem", color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>Rajesh Kumar</h4>
                                     <div style={{ color: "var(--color-gold)", fontSize: "0.9rem" }}>★★★★★</div>
@@ -400,7 +400,7 @@ export default function Home() {
                         
                         <div className="contact-card-dark fade-in-up delay-2" style={{ padding: "2rem" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-                                <img src="https://ui-avatars.com/api/?name=Anjali+Menon&background=C5A059&color=1C1613&rounded=true" alt="Anjali M." style={{ width: "50px", height: "50px" }} />
+                                <img loading="lazy" decoding="async" src="https://ui-avatars.com/api/?name=Anjali+Menon&background=C5A059&color=1C1613&rounded=true" alt="Anjali M." style={{ width: "50px", height: "50px" }} />
                                 <div>
                                     <h4 style={{ margin: 0, fontSize: "1.1rem", color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>Anjali Menon</h4>
                                     <div style={{ color: "var(--color-gold)", fontSize: "0.9rem" }}>★★★★★</div>
@@ -411,7 +411,7 @@ export default function Home() {
 
                         <div className="contact-card-dark fade-in-up delay-3" style={{ padding: "2rem" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-                                <img src="https://ui-avatars.com/api/?name=Vikram+Reddy&background=C5A059&color=1C1613&rounded=true" alt="Vikram R." style={{ width: "50px", height: "50px" }} />
+                                <img loading="lazy" decoding="async" src="https://ui-avatars.com/api/?name=Vikram+Reddy&background=C5A059&color=1C1613&rounded=true" alt="Vikram R." style={{ width: "50px", height: "50px" }} />
                                 <div>
                                     <h4 style={{ margin: 0, fontSize: "1.1rem", color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>Vikram Reddy</h4>
                                     <div style={{ color: "var(--color-gold)", fontSize: "0.9rem" }}>★★★★★</div>

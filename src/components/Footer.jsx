@@ -42,7 +42,7 @@ export default function Footer() {
                         <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
                             <li style={{ color: "#FFFFFF", fontWeight: 700, fontSize: "1.05rem" }}><i className="fas fa-user-tie" style={{ color: "#C5A059", marginRight: "10px" }}></i> Srinivasarao Vasamsetti <span style={{ fontWeight: 400, color: "#C5A059", fontSize: "0.85rem", display: "block", marginLeft: "24px" }}>(Owner & Master Craftsman)</span></li>
                             <li><a href="tel:+918341745511" style={{ color: "#FFFFFF", textDecoration: "none", fontSize: "0.95rem", fontWeight: 600 }}><i className="fas fa-phone-alt" style={{ color: "#C5A059", marginRight: "10px" }}></i> +91 83417 45511</a></li>
-                            <li><a href="https://wa.me/918341745511" style={{ color: "#25D366", textDecoration: "none", fontSize: "0.95rem", fontWeight: 600 }}><i className="fab fa-whatsapp" style={{ marginRight: "10px" }}></i> WhatsApp Consultation</a></li>
+                            <li><a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" style={{ color: "#25D366", textDecoration: "none", fontSize: "0.95rem", fontWeight: 600 }}><i className="fab fa-whatsapp" style={{ marginRight: "10px" }}></i> WhatsApp Consultation</a></li>
                             <li><a href="mailto:info@srinivasinteriors.com" style={{ color: "#FFFFFF", textDecoration: "none", fontSize: "0.95rem" }}><i className="fas fa-envelope" style={{ color: "#C5A059", marginRight: "10px" }}></i> info@srinivasinteriors.com</a></li>
                             <li style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.9rem" }}><i className="fas fa-map-marker-alt" style={{ color: "#C5A059", marginRight: "10px" }}></i> Hyderabad, Telangana, India</li>
                         </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
                     <div style={{ display: "flex", gap: "1.2rem" }}>
                         <a href="#" style={{ color: "#C5A059", fontSize: "1.2rem" }}><i className="fab fa-facebook"></i></a>
                         <a href="#" style={{ color: "#C5A059", fontSize: "1.2rem" }}><i className="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/918341745511" style={{ color: "#25D366", fontSize: "1.2rem" }}><i className="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" style={{ color: "#25D366", fontSize: "1.2rem" }}><i className="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>

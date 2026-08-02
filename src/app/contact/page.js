@@ -78,7 +78,7 @@ export default function Contact() {
                                 <div>
                                     <h4 style={{ color: "var(--color-gold-light)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "1.5px", fontWeight: 700, marginBottom: "4px" }}>WhatsApp Direct</h4>
                                     <p style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: 0 }}>
-                                        <a href="https://wa.me/918341745511" target="_blank" style={{ color: "#25D366", textDecoration: "none" }} rel="noreferrer">+91 83417 45511 (Instant Chat)</a>
+                                        <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" style={{ color: "#25D366", textDecoration: "none" }} rel="noreferrer">+91 83417 45511 (Instant Chat)</a>
                                     </p>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@ export default function Contact() {
                                         <i className="fas fa-paper-plane"></i> SUBMIT REQUEST
                                     </button>
                                     
-                                    <a href="https://wa.me/918341745511?text=Hi%20Srinivas%20Interiors,%20I%20would%20like%20to%20discuss%20a%20new%20interior%20project." target="_blank" className="btn" style={{ background: "#25D366", color: "#FFFFFF", border: "none", padding: "15px 22px", fontWeight: 700, borderRadius: "30px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", boxShadow: "0 4px 15px rgba(37, 211, 102, 0.3)", fontSize: "0.9rem", transition: "var(--transition-fast)" }} rel="noreferrer">
+                                    <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" target="_blank" className="btn" style={{ background: "#25D366", color: "#FFFFFF", border: "none", padding: "15px 22px", fontWeight: 700, borderRadius: "30px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px", textDecoration: "none", boxShadow: "0 4px 15px rgba(37, 211, 102, 0.3)", fontSize: "0.9rem", transition: "var(--transition-fast)" }} rel="noreferrer">
                                         <i className="fab fa-whatsapp" style={{ fontSize: "1.2rem" }}></i> WhatsApp Direct
                                     </a>
                                 </div>

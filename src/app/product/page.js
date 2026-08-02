@@ -83,14 +83,14 @@ export default function ProductDetails() {
                         
                         <div className="product-images fade-in-up">
                             <div className="crop-wrap" style={{ borderRadius: "var(--radius-md)", marginBottom: "1rem" }}>
-                                <img src={mainImage} alt="Main Product View" className="product-main-img" />
+                                <img loading="lazy" decoding="async" src={mainImage} alt="Main Product View" className="product-main-img" />
                             </div>
                             
                             <div className="product-gallery">
-                                <img src="/assets/wardrobe (1).png" alt="Dark Marble Finish" className={mainImage === "/assets/wardrobe (1).png" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe (1).png")} />
-                                <img src="/assets/wardrobe_custom_herringbone.jpg" alt="Herringbone Wood Finish" className={mainImage === "/assets/wardrobe_custom_herringbone.jpg" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe_custom_herringbone.jpg")} />
-                                <img src="/assets/wardrobe (2).png" alt="Thumb 3" className={mainImage === "/assets/wardrobe (2).png" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe (2).png")} />
-                                <img src="/assets/wardrobe (3).png" alt="Thumb 4" className={mainImage === "/assets/wardrobe (3).png" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe (3).png")} />
+                                <img loading="lazy" decoding="async" src="/assets/wardrobe (1).png" alt="Dark Marble Finish" className={mainImage === "/assets/wardrobe (1).png" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe (1).png")} />
+                                <img loading="lazy" decoding="async" src="/assets/wardrobe_custom_herringbone.jpg" alt="Herringbone Wood Finish" className={mainImage === "/assets/wardrobe_custom_herringbone.jpg" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe_custom_herringbone.jpg")} />
+                                <img loading="lazy" decoding="async" src="/assets/wardrobe (2).png" alt="Thumb 3" className={mainImage === "/assets/wardrobe (2).png" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe (2).png")} />
+                                <img loading="lazy" decoding="async" src="/assets/wardrobe (3).png" alt="Thumb 4" className={mainImage === "/assets/wardrobe (3).png" ? "active" : ""} onClick={() => setMainImage("/assets/wardrobe (3).png")} />
                             </div>
                         </div>
 
@@ -119,7 +119,7 @@ export default function ProductDetails() {
                             <div className="product-actions">
                                 <Link href="/contact" className="btn btn-primary" style={{ flex: 1 }}><i className="fas fa-envelope"></i> Request Quote</Link>
                                 <a href="tel:+918341745511" className="btn btn-outline" style={{ flex: 1 }}><i className="fas fa-phone-alt"></i> Call</a>
-                                <a href="https://wa.me/918341745511" className="btn" style={{ flex: 1, backgroundColor: "#25D366", color: "white" }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp</a>
+                                <a href="https://wa.me/918341745511?text=Hello!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20carpentry%20and%20interior%20design%20services.%20I%20would%20like%20to%20know%20more%20about%20your%20wardrobes%2C%20modular%20kitchens%2C%20TV%20units%2C%20custom%20furniture%2C%20aluminium%20works%2C%20and%20pricing.%20Please%20share%20the%20details%20and%20help%20me%20get%20a%20quotation.%20Thank%20you!" className="btn" style={{ flex: 1, backgroundColor: "#25D366", color: "white" }} rel="noreferrer"><i className="fab fa-whatsapp"></i> WhatsApp</a>
                             </div>
                         </div>
                     </div>
