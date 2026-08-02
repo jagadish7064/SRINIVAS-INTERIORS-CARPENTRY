@@ -161,7 +161,7 @@ export default function Gallery() {
                     z-index: 9999;
                     display: flex;
                     opacity: 0; pointer-events: none;
-                    transition: opacity 0.3s ease;
+                    transition: opacity 0.1s ease;
                 }
                 .lightbox.active { opacity: 1; pointer-events: auto; }
                 .lightbox-container {
@@ -194,9 +194,20 @@ export default function Gallery() {
                 @media (max-width: 992px) {
                     .portfolio-layout { grid-template-columns: 1fr; }
                     .filter-sidebar { position: relative; top: 0; }
-                    .lightbox-container { grid-template-columns: 1fr; grid-template-rows: 40vh 1fr; overflow-y: auto; }
-                    .lightbox-images { padding: 1rem; }
-                    .lightbox-details { padding: 1.5rem; }
+                    .lightbox-container { 
+                        width: 100%; 
+                        max-height: 100vh;
+                        height: 100vh;
+                        border-radius: 0;
+                        border: none;
+                        grid-template-columns: 1fr; 
+                        grid-template-rows: 60vh 1fr; 
+                        overflow-y: auto; 
+                    }
+                    .lightbox-images { padding: 0; height: 100%; }
+                    .lightbox-main-img { max-height: 100%; border-radius: 0; object-fit: contain !important; }
+                    .lightbox-details { padding: 1.5rem; height: 100%; }
+                    .lb-nav { top: 30vh; }
                 }
             `}} />
             <section className="services-header-banner">
