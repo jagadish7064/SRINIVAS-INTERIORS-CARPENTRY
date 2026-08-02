@@ -41,7 +41,7 @@ export default function Header() {
                     </div>
                 </Link>
                 <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
-                    <ul className="nav-list" id="navList">
+                    <ul className={`nav-list ${isMenuOpen ? "active" : ""}`} id="navList">
                         <li><Link href="/" className={`nav-link ${pathname === "/" ? "active" : ""}`}>HOME</Link></li>
                         <li><Link href="/about" className={`nav-link ${pathname === "/about" ? "active" : ""}`}>ABOUT US</Link></li>
                         <li><Link href="/services" className={`nav-link ${pathname === "/services" ? "active" : ""}`}>SERVICES</Link></li>

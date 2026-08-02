@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import ScrollObserver from "@/components/ScrollObserver";
+import GlobalLightbox from "@/components/GlobalLightbox";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <FloatingActions />
+        <GlobalLightbox />
       </body>
     </html>
   );
